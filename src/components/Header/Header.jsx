@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Header = () => {
     return (
         <div className="py-[50px] px-[140px] flex justify-between items-center">
@@ -5,8 +7,8 @@ const Header = () => {
                 <h2 className="text-[32px] font-bold">Recipe Calories</h2>
             </div>
             <div className="flex gap-[48px] text-base font-normal text-[#150B2BB3]">
-                <p><a href="#">Home</a></p>
-                <p><a href="#">Recipes</a></p>
+                <p><NavLink to="/">Home</NavLink></p>
+                <p><NavLink to="/recipes">Recipes</NavLink></p>
                 <p><a href="#">About</a></p>
                 <p><a href="#">Search</a></p>
             </div>
