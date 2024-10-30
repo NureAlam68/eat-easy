@@ -4,7 +4,6 @@ import Recipe from "../Recipe/Recipe";
 const Recipes = () => {
     const object = useLoaderData();
     const recipes = object.categories;
-    console.log(recipes)
     return (
         <div className="mt-[88px] px-[140px]">
             <h2 className="text-[48px] text-center font-bold">Our top recipes</h2>
