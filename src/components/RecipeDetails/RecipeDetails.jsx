@@ -3,8 +3,8 @@ import Details from "../Details/Details";
 
 const RecipeDetails = () => {
     const recipesObject = useLoaderData();
-    const recipes = recipesObject.categories;
-    console.log(recipes)
+    
+    console.log(recipesObject)
    
     // const recipes = recipesObject.categories;
     // console.log(recipes)
@@ -12,11 +12,6 @@ const RecipeDetails = () => {
     return (
         
         <div>
-            {
-                recipes.map((recipe, idx) => 
-                <Details key={idx} recipe={recipe}></Details>
-                )
-            }
             
         </div>
     );

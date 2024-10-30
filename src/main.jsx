@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Recipes from './components/Recipes/Recipes'
 import RecipeDetails from './components/RecipeDetails/RecipeDetails'
+import Banner from './components/Banner/Banner'
 
 const router = createBrowserRouter([
   {
@@ -12,13 +13,17 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     children: [
       {
+        path: "/",
+        element:<Banner></Banner>
+      },
+      {
         path: "/recipes",
         loader: () => fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
         element: <Recipes></Recipes>
       },
       {
-        path: "/recipe/:idCategory",
-        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/categories.php/${params.idCategory}`),
+        path: "/recipe/:strCategory",
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.strCategory}`),
         element: <RecipeDetails></RecipeDetails>
       }
     ]

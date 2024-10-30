@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Recipe = ({recipe}) => {
     const {strCategory, strCategoryThumb, idCategory} = recipe;
+    console.log(recipe)
 
     const navigate = useNavigate();
 
