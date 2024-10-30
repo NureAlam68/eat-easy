@@ -1,10 +1,15 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Details = () => {
   const detailsArr = useLoaderData()
   const details= detailsArr.meals[0];
   const {strMealThumb, strMeal, strInstructions} = details
-  
+  const navigate = useNavigate()
+
+  const handleBack = () => {
+      navigate(-1)
+  }
+
   return (
     <div className="px-[140px]">
       <h1 className="text-[48px] text-center font-bold">
@@ -26,13 +31,13 @@ const Details = () => {
         <span className="font-bold">Recipe: </span>{strInstructions}
         </p>
         <div className="card-actions mb-20">
-          <Link to={`/recipe`}
+          <button onClick={handleBack}
           
           
             className="px-6 py-[13px] mx-auto bg-[#0BE58A] text-[18px] font-semibold rounded-[10px]"
           >
             Go Back
-          </Link>
+          </button>
         </div>
       </div>
     </div>

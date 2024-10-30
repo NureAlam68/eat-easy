@@ -7,11 +7,13 @@ import Recipes from './components/Recipes/Recipes'
 import RecipeDetails from './components/RecipeDetails/RecipeDetails'
 import Banner from './components/Banner/Banner'
 import Details from './components/Details/Details'
+import Error from './components/Error/Error'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
