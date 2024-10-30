@@ -1,15 +1,9 @@
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Recipe = ({recipe}) => {
-    const {strCategory, strCategoryThumb, idCategory} = recipe;
-    console.log(recipe)
+    const {strCategory, strCategoryThumb} = recipe;
 
-    const navigate = useNavigate();
-
-  const handleDetails = () => {
-      navigate(`/recipe/${idCategory}`)
-  }
 
     return (
         <div className="card bg-base-100 pt-6 border mt-[50px]">
@@ -27,12 +21,13 @@ const Recipe = ({recipe}) => {
         </p>
         <hr />
         <div className="card-actions mt-6">
-          <button
-          onClick={handleDetails}
+          <Link to={`/recipe/${strCategory}`}
+          
+          
             className="px-6 py-[13px] bg-[#0BE58A] text-[18px] font-semibold rounded-[10px]"
           >
             Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

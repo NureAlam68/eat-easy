@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="py-[50px] px-[140px] flex justify-between items-center">
             <div>
-                <h2 className="text-[32px] font-bold">Recipe Calories</h2>
+                <h2 className="text-[32px] font-bold">EatEasy</h2>
             </div>
             <div className="flex gap-[48px] text-base font-normal text-[#150B2BB3]">
                 <p><NavLink to="/">Home</NavLink></p>
