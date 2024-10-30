@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const RecipeDetails = () => {
     const recipesObject = useLoaderData();
@@ -27,11 +27,11 @@ const RecipeDetails = () => {
                       </p>
                       <hr />
                       <div className="card-actions mt-6">
-                        <button to=""
+                        <Link to={`/details/${recipe.idMeal}`}
                           className="px-6 py-[13px] bg-[#0BE58A] text-[18px] font-semibold rounded-[10px]"
                         >
                           Details
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

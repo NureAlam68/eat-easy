@@ -26,7 +26,7 @@ const Recipe = ({recipe}) => {
           
             className="px-6 py-[13px] bg-[#0BE58A] text-[18px] font-semibold rounded-[10px]"
           >
-            Details
+            More
           </Link>
         </div>
       </div>

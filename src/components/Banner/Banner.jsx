@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
     return (
-        <div
+        <section>
+            <div
             className="w-[1320px] h-[600px] mx-auto pt-[129px] px-[194px] rounded-[24px] bg-cover bg-center relative overflow-hidden"
             style={{
                 backgroundImage: 'linear-gradient(0deg, rgba(21, 11, 43, 0.9), rgba(21, 11, 43, 0) 100%), url(https://i.ibb.co/ZVYpz1t/chef-holding-pan-with-fire-inside.jpg)',
@@ -18,14 +20,15 @@ const Banner = () => {
                 </p>
             </div>
             <div className="flex gap-[30px] mt-10 justify-center">
-                <button className="px-[30px] py-[20px] rounded-[50px] bg-[#0BE58A] text-[20px] font-semibold">
+                <Link to={`/recipes`} className="px-[30px] py-[20px] rounded-[50px] bg-[#0BE58A] text-[20px] font-semibold">
                 Explore Now
-                </button>
+                </Link>
                 <button className="px-[30px] py-[20px] rounded-[50px] text-[20px] text-white border font-semibold hover:bg-[#0BE58A] hover:text-black">
                 Our Feedback
                 </button>
             </div>
         </div>
+        </section>
     );
 };
 

@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import Recipes from './components/Recipes/Recipes'
 import RecipeDetails from './components/RecipeDetails/RecipeDetails'
 import Banner from './components/Banner/Banner'
+import Details from './components/Details/Details'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
         path: "/recipe/:strCategory",
         loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.strCategory}`),
         element: <RecipeDetails></RecipeDetails>
+      },
+      {
+        path: "/details/:idMeal",
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`),
+        element: <Details></Details>
       }
     ]
   }
